@@ -8,7 +8,7 @@ const AppCard = (props) => {
     <div className="max-w-md rounded overflow-hidden shadow-lg border flex flex-col">
       <img className="w-full" src={props.img} alt="" />
       <div className="px-6 py-4">
-          <div className="font-bold text-xl mb-2 text-left">{props.title ? props.title : props.name}</div>
+          <div className="font-bold text-xl mb-2 text-left">{props.title}</div>
           <p className="text-gray-600 text-left">{props.author} - {new_date} {new_time}</p>
           <p className="text-gray-900 text-base text-left mb-4">
           {props.desc}
