@@ -19,18 +19,18 @@ function App() {
 
   const fetchCategoryNews = async (cat) => {
     const resp = await ApiService.ReqGet(`${config.baseUrl}/top-headlines/sources?category=${toLower(cat)}&apiKey=${config.apiKey}`)
-    setNews(resp.data.sources)
+    setNews(resp?.data?.sources)
     // console.log(resp)
   }
 
   const fetchInitialSearch = async (q) => {
     const resp = await ApiService.ReqGet(`${config.baseUrl}/everything?q=${q}&apiKey=${config.apiKey}`)
-    setNews(resp.data.articles)
+    setNews(resp?.data?.articles)
   }
 
   const fetchInitialNews = async () => {
     const resp = await ApiService.ReqGet(`${config.baseUrl}/top-headlines?country=us&apiKey=${config.apiKey}`)
-    setNews(resp.data.articles)
+    setNews(resp?.data?.articles)
   }
 
 
